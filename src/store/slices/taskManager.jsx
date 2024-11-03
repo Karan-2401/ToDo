@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState= {
-    value:'karan'
+    value:{
+        memory:localStorage.getItem('Task'),
+        Jarvis:[]
+    }
 }
 
 export const TaskManager = createSlice({
@@ -9,7 +12,10 @@ export const TaskManager = createSlice({
     initialState,
     reducers:{
         Add:(state,action)=>{
-            const {Task,Time} = action.payload
+            const {Task,Time} = action.payload  
+            //const a = state.value.Jarvis;
+            //const aa =a[a.length+1] = {Task,Time}
+            //localStorage.setItem('Task',JSON.stringify(aa))
             
         }
     }
